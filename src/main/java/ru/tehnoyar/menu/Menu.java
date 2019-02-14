@@ -36,6 +36,9 @@ public class Menu {
                 case "6":
                     serrilalize.serialize(library);
                     break;
+                case "7":
+                    case7();
+                    break;
                 case "9":
                     System.out.println("Выход из программы");
                     break;
@@ -59,6 +62,7 @@ public class Menu {
         System.out.printf("%-25s%-10s%n", "4", "Показать список книг из списка,  а не из txt");
         System.out.printf("%-25s%-10s%n", "5", "Очистить весь список книг");
         System.out.printf("%-25s%-10s%n", "6", "Сохранение списка книг в файл");
+        System.out.printf("%-25s%-10s%n", "7", "Поиск по названию книги");
         System.out.printf("%-25s%-10s%n", "9", "Выйти из программы");
         System.out.println("---------------------------------------------------------------------------");
         System.out.printf("%-65s%-5s%n", " ", "введите число...");
@@ -154,6 +158,14 @@ public class Menu {
 //        }
 //        writer.close();
     }
+    //"7"
+    public static void case7() throws IOException {
+        System.out.println("Введите название книги для поиска");
+        String bookName = reader.readLine();
+        library.findBook(library.getBooks(), bookName);
+    }
+
+
 
 
     public static void inputBookName() throws IOException {
