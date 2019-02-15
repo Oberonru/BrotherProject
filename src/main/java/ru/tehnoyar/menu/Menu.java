@@ -68,7 +68,6 @@ public class Menu {
         System.out.printf("%-65s%-5s%n", " ", "введите число...");
     }
 
-
     //"1"
     public static void bookInitialize() throws Exception {
         while (true) {
@@ -162,11 +161,8 @@ public class Menu {
     public static void case7() throws IOException {
         System.out.println("Введите название книги для поиска");
         String bookName = reader.readLine();
-        library.findBook(library.getBooks(), bookName);
+        System.out.println(library.findBook(library.getBooks(), bookName));
     }
-
-
-
 
     public static void inputBookName() throws IOException {
         System.out.println("Введите название книги");

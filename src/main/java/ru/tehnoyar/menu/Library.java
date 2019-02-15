@@ -23,7 +23,6 @@ public class Library {
             String findString =  bookList.get(i).getBookName();
             if (findString.matches(".*" + inputText + ".*")) {
                 findList.add(findString);
-                System.out.println(findList.get(i));
             }
         }
         return findList.toString();
